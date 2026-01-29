@@ -1,11 +1,10 @@
 .app {
-  gap: 3.125rem;
-  display: flex;
 
-  &__sidebar {
-  }
+
 
   &__router {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

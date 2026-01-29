@@ -1,14 +1,21 @@
-<form class="uc-form" [formGroup]="form" (ngSubmit)="submit()">
-  @for(field of fields(); track field) {
-    <input
-      [type]="field.type"
-      [formControlName]="field.name"
-      [placeholder]="field.placeholder"
-      [attr.data-directives]="field.directives?.join(',')"
-    />
-  }
+<div class="uc-form">
+  <form class="uc-form__form"  [formGroup]="form" (ngSubmit)="submit()">
+    <div class="uc-form__input-group">
+      @for(field of fields(); track field) {
+        <input
+          [type]="field.type"
+          [formControlName]="field.name"
+          [placeholder]="field.placeholder"
+          [attr.data-directives]="field.directives?.join(',')"
+        />
+      }
+    </div>
 
-  <button type="submit">
-    {{ submitText() }}
-  </button>
-</form>
+    <div class="uc-form__button-group">
+      <button type="submit">
+        {{ submitText() }}
+      </button>
+    </div>
+  </form>
+
+</div>

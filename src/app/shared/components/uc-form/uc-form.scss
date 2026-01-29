@@ -1,0 +1,96 @@
+.uc-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &__form {
+    width: 37.5rem;
+    border: 0.0625rem solid lightgrey;
+    border-radius: 1.25rem;
+    padding: 1rem;
+  }
+
+  &__input-group {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 100%;
+      max-width: 35.625rem;
+      height: 2.8125rem;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      border: 0.09375rem solid lightgrey;
+      outline: none;
+      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+      box-shadow: 0rem 0rem 1.25rem -1.125rem;
+    }
+
+    input:hover {
+      border: 0.125rem solid lightgrey;
+      box-shadow: 0rem 0rem 1.25rem -1.0625rem;
+    }
+
+    input:active {
+      transform: scale(0.95);
+    }
+
+    input:focus {
+      border: 0.125rem solid grey;
+    }
+  }
+
+  &__button-group {
+    button {
+      font-family: inherit;
+      display: inline-block;
+      width: 8em;
+      height: 2.6em;
+      line-height: 2.5em;
+      margin: 1.25rem;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border: 0.125rem solid  #560bad;
+      transition: color 0.5s;
+      z-index: 1;
+      font-size: 1.0625rem;
+      border-radius: 0.375rem;
+      font-weight: 500;
+      color:  #560bad;
+    }
+
+    button:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background:  #560bad;
+      height: 9.375rem;
+      width: 12.5rem;
+      border-radius: 50%;
+    }
+
+    button:hover {
+      color: #fff;
+    }
+
+    button:before {
+      top: 100%;
+      left: 100%;
+      transition: all 0.7s;
+    }
+
+    button:hover:before {
+      top: -1.875rem;
+      left: -1.875rem;
+    }
+
+    button:active:before {
+      background: #3a0ca3;
+      transition: background 0s;
+    }
+
+  }
+}
